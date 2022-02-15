@@ -17,3 +17,32 @@
 Модель: {}
 Год выпуска: {}
 """
+
+
+class Phone:
+    brand: str
+    model: str
+    issue_year: int
+
+    def __init__(self, brand, model, issue_year):
+        self.brand = brand
+        self.model = model
+        self.issue_year = issue_year
+
+    def get_info(self):
+        a = [self.brand, self.model, self.issue_year]
+        a = tuple(a)
+        return a
+
+    def __str__(self):
+        print(f'Бренд: {self.brand}\nМодель: {self.model}\nГод выпусhка:{self.issue_year}')
+
+    def receive_call(self, name):
+        name = 'Кристина'
+        print(f'Звонит {name}')
+
+
+A = Phone('Sumsung', "A505a", 2019)
+print(A.__str__())
+print(A.get_info())
+print(A.receive_call('Kristina'))
